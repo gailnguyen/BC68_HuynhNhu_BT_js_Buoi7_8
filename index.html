@@ -33,65 +33,77 @@
                 <button class="btn btn-primary my-3" id="btnThemSo">Thêm số</button>
             </div>
             <div id="ketQua"></div>
-            <!-- 1. Tổng số dương -->
-            <button class="btn btn-success mt-3" id="btnTongSoDuong">Tổng các số dương</button>
-            <!-- 2. Đếm số dương -->
-            <button class="btn btn-warning mt-3" id="btnDemSoDuong">Đếm số dương</button>
-            <!-- 3. Tìm số nhỏ nhất trong mảng -->
-            <button class="btn btn-dark mt-3" id="btnTimSoNhoNhat">Số nhỏ nhất trong mảng</button>
-            <!-- 4. Tìm số dương nhỏ nhất trong mảng -->
-            <button class="btn btn-secondary mt-3" id="btnTimSoDuongNhoNhat">Số dương nhỏ nhất trong mảng</button>
-            <!-- 5. Tìm số chẵn cuối cùng trong mảng (không có số chẳn trả về -1) -->
-            <button class="btn btn-light mt-3" id="btnTimSoChanCuoiCung">Số chẵn cuối cùng trong mảng</button>
+            <div class="my-3">
+                <!-- 1. Tổng số dương -->
+                <button class="btn btn-success" id="btnTongSoDuong">Tổng các số dương</button>
+                <!-- 2. Đếm số dương -->
+                <button class="btn btn-warning" id="btnDemSoDuong">Đếm số dương</button>
+                <!-- 3. Tìm số nhỏ nhất trong mảng -->
+                <button class="btn btn-dark" id="btnTimSoNhoNhat">Số nhỏ nhất trong mảng</button>
+                <!-- 4. Tìm số dương nhỏ nhất trong mảng -->
+                <button class="btn btn-secondary" id="btnTimSoDuongNhoNhat">Số dương nhỏ nhất trong mảng</button>
+                <!-- 5. Tìm số chẵn cuối cùng trong mảng (không có số chẳn trả về -1) -->
+                <button class="btn btn-light" id="btnTimSoChanCuoiCung">Số chẵn cuối cùng trong mảng</button>
+            </div>
+
 
             <!-- 6. Đổi vị trí phần tử -->
             <div class="row">
                 <div class="col-6">
-                    <div class="mb-3">
+                    <div class="">
                         <label for="" class="form-label">Vị trí số thứ nhất</label>
                         <input type="text" class="form-control" name="" id="viTriSoThuNhat" aria-describedby="helpId"
                             placeholder="Nhập vị trí số thứ nhất" />
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="mb-3">
+                    <div class="">
                         <label for="" class="form-label">Vị trí số thứ hai</label>
                         <input type="text" class="form-control" name="" id="viTriSoThuHai" aria-describedby="helpId"
                             placeholder="Nhập vị trí số thứ hai" />
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <button class="btn btn-danger" id="btnDoiViTri">Đổi vị trí 2 phần tử trong mảng</button>
-                    </div>
+                <div class="row" id="chuoiDoiSo"></div>
+                <div class="mt-3">
+                    <button class="btn btn-danger" id="btnDoiViTri">Đổi vị trí 2 phần tử trong mảng</button>
                 </div>
+
+
             </div>
+        </div>
 
-            <!-- 7. Sắp xếp theo thứ tự tăng dần -->
-            <div class="mt-3">
-                <button class="btn btn-info" id="btnSapXepTangDan">Sắp xếp mảng theo thứ tự tăng dần</button>
+        <!-- 7. Sắp xếp theo thứ tự tăng dần -->
+        <div class="row" id="chuoiTang"></div>
+        <div class="mt-3">
+            <button class="btn btn-info" id="btnSapXepTangDan">Sắp xếp mảng theo thứ tự tăng dần</button>
+        </div>
+
+
+        <!-- 8. Tìm số nguyên tố đầu tiên trong mảng -->
+        <div class="mt-3" id="soNguyenTo">
+            <button class="btn btn-dark" id="btnKiemTraSoNguyenTo">Số nguyên tố đầu tiên trong mảng</button>
+        </div>
+
+
+
+        <!-- 9. Tìm số nguyên -->
+        <div class="row mt-4">
+            <div id="mangSoThuc">
+                <input type="text" class="form-control" name="" id="soThuc" aria-describedby="helpId"
+                    placeholder="Nhập số thực" />
+                <button class="btn btn-primary my-3" id="btnThemSoThuc">Thêm số</button>
             </div>
-
-            <!-- 8. Tìm số nguyên tố đầu tiên trong mảng -->
-
-
-            <!-- 9. Tìm số nguyên -->
-            <div class="row mt-4">
-                <div class="col-6">
-                    <input type="text" class="form-control" name="" id="soThuc" aria-describedby="helpId"
-                        placeholder="Nhập số thực" />
-                    <button class="btn btn-primary my-3" id="btnThemSoThuc">Thêm số</button>
-                    <button class="btn btn-success" id="btnDemSoNguyen">Lọc số nguyên</button>
-                </div>
+            <div id="mangSoNguyen">
+                <button class="btn btn-success" id="btnDemSoNguyen">Lọc số nguyên</button>
             </div>
-
-            <!-- 10. So sánh số âm dương -->
-            <button class="btn btn-warning" id="btnSoSanh">So sánh số âm và số dương</button>
-
-
-
 
         </div>
+
+        <!-- 10. So sánh số âm dương -->
+        <button class="btn btn-warning mt-3" id="btnSoSanh">So sánh số âm và số dương</button>
+        <p id="soSanhAmDuong"></p>
+
+    </div>
 
 
     </div>
