@@ -5,12 +5,11 @@ document.getElementById("btnThemSo").onclick = function (event) {
   arrSoN.push(soN);
   console.log(arrSoN);
 
-  let chuoiSoN = document.createElement("span");
-  chuoiSoN.className = "mt-3 text-dark";
-  // chuoiSoN.innerHTML = arrSoN;
+  document.getElementById("chuoiSoN").className = "mt-3 text-dark";
   for (let i = 0; i < arrSoN.length; i++) {
-    chuoiSoN.innerHTML = `${arrSoN[i]},`;
-    document.getElementById("chuoi").appendChild(chuoiSoN);
+    document.getElementById(
+      "chuoiSoN"
+    ).innerHTML = `<i class="fa-solid fa-arrow-right"></i> Chuỗi số N gồm: ${arrSoN}, `;
   }
 };
 
@@ -26,7 +25,7 @@ document.getElementById("btnTongSoDuong").onclick = function (event) {
   }
   console.log(tongSoDuong);
   document.getElementById(
-    "ketQua"
+    "ketQua1"
   ).innerHTML = `1. Tổng các số dương trong chuỗi trên là: ${tongSoDuong}`;
 };
 
@@ -40,7 +39,7 @@ document.getElementById("btnDemSoDuong").onclick = function (event) {
   }
   console.log(count);
   document.getElementById(
-    "ketQua"
+    "ketQua2"
   ).innerHTML = `2. Số số dương trong chuỗi trên là: ${count}`;
 };
 
@@ -55,7 +54,7 @@ document.getElementById("btnTimSoNhoNhat").onclick = function () {
   }
   console.log(soNhoNhat);
   document.getElementById(
-    "ketQua"
+    "ketQua3"
   ).innerHTML = `3. Số nhỏ nhất trong mảng là: ${soNhoNhat}`;
 };
 
@@ -69,7 +68,7 @@ document.getElementById("btnTimSoDuongNhoNhat").onclick = function () {
   }
   console.log(soDuongNhoNhat);
   document.getElementById(
-    "ketQua"
+    "ketQua4"
   ).innerHTML = `4. Số dương nhỏ nhất trong mảng là: ${soDuongNhoNhat}`;
 };
 
@@ -84,11 +83,15 @@ document.getElementById("btnTimSoChanCuoiCung").onclick = function () {
   });
   console.log(arrSoChan);
   console.log(arrSoChan[arrSoChan.length - 1]);
-  document.getElementById(
-    "ketQua"
-  ).innerHTML = `5. Số chẵn cuối cùng trong mảng là: ${
-    arrSoChan[arrSoChan.length - 1]
-  }`;
+  if (arrSoChan.length) {
+    document.getElementById(
+      "ketQua5"
+    ).innerHTML = `5. Số chẵn cuối cùng trong mảng là: ${
+      arrSoChan[arrSoChan.length - 1]
+    }`;
+  } else {
+    document.getElementById("ketQua5").innerHTML = `5. -1`;
+  }
 };
 
 // 6. Đổi vị trí phần tử
@@ -102,10 +105,8 @@ document.getElementById("btnDoiViTri").onclick = function () {
   arrSoN[viTriSoThuHai] = soThuNhat;
   console.log(arrSoN);
 
-  let chuoiSoSauDoi = document.createElement("span");
-  chuoiSoSauDoi.className = "mt-3 text-dark";
-  chuoiSoSauDoi.innerHTML = arrSoN;
-  document.getElementById("chuoiDoiSo").appendChild(chuoiSoSauDoi);
+  document.getElementById("ketQua6").className = "my-2 text-dark";
+  document.getElementById("ketQua6").innerHTML = `6. Mảng mới: ${arrSoN}`;
 };
 
 // 7. Sắp xếp mảng tăng dần
@@ -114,10 +115,8 @@ document.getElementById("btnSapXepTangDan").onclick = function () {
     return a - b;
   });
   console.log(arrSoN);
-  let chuoiTang = document.createElement("span");
-  chuoiTang.className = "mt-3 text-dark";
-  chuoiTang.innerHTML = arrSoN;
-  document.getElementById("chuoiTang").appendChild(chuoiTang);
+  document.getElementById("ketQua7").className = "my-2 text-dark";
+  document.getElementById("ketQua7").innerHTML = `7. Mảng tăng dần: ${arrSoN}`;
 };
 
 // 8. Tìm số nguyên tố đầu tiên trong mảng
@@ -152,10 +151,15 @@ document.getElementById("btnKiemTraSoNguyenTo").onclick = function () {
   }
   console.log(arrSoNguyenTo);
   console.log(arrSoNguyenTo[0]);
-  let soNguyenTo = document.createElement("span");
-  soNguyenTo.className = "mt-3 text-dark";
-  soNguyenTo.innerHTML = arrSoNguyenTo[0];
-  document.getElementById("soNguyenTo").appendChild(soNguyenTo);
+
+  document.getElementById("ketQua8").className = "my-2 text-dark";
+  if (arrSoNguyenTo.length * 1) {
+    document.getElementById(
+      "ketQua8"
+    ).innerHTML = `8. Số nguyên tố đầu tiên trong mảng là: ${arrSoNguyenTo[0]}`;
+  } else {
+    document.getElementById("ketQua8").innerHTML = "9. -1";
+  }
 };
 
 // 9. Tìm số nguyên
@@ -165,12 +169,11 @@ document.getElementById("btnThemSoThuc").onclick = function (event) {
   arrSoThuc.push(soThuc);
   console.log(arrSoThuc);
 
-  let mangSoThuc = document.createElement("span");
-  mangSoThuc.className = "mt-3 text-dark";
-  // mangSoThuc.innerHTML = arrSoN;
+  document.getElementById("mangSoThuc").className = "mb-3 text-dark";
   for (let i = 0; i < arrSoThuc.length; i++) {
-    mangSoThuc.innerHTML = `${arrSoThuc[i]},`;
-    document.getElementById("mangSoThuc").appendChild(mangSoThuc);
+    document.getElementById(
+      "mangSoThuc"
+    ).innerHTML = `<i class="fa-solid fa-arrow-right"></i> Chuỗi số thực: ${arrSoThuc},`;
   }
 };
 
@@ -182,10 +185,10 @@ document.getElementById("btnDemSoNguyen").onclick = function (event) {
     }
   }
   console.log(arrSoNguyen);
-  let mangSoNguyen = document.createElement("span");
-  mangSoNguyen.className = "mt-3 text-dark";
-  mangSoNguyen.innerHTML = arrSoNguyen;
-  document.getElementById("mangSoNguyen").appendChild(mangSoNguyen);
+  document.getElementById("ketQua9").className = "mb-3 text-dark";
+  document.getElementById(
+    "ketQua9"
+  ).innerHTML = `9. Lọc số nguyên: ${arrSoNguyen}`;
 };
 
 // 10. So sánh số âm dương
@@ -199,14 +202,15 @@ document.getElementById("btnSoSanh").onclick = function (event) {
       countSoAm++;
     }
   }
+  document.getElementById("ketQua10").className = "mt-3 text-dark";
   if (countSoDuong > countSoAm) {
     console.log("Số dương > Số âm");
-    document.getElementById("soSanhAmDuong").innerHTML = `Số dương > Số âm`;
+    document.getElementById("ketQua10").innerHTML = `10. Số dương > Số âm`;
   } else if (countSoDuong < countSoAm) {
     console.log("Số dương < Số âm");
-    document.getElementById("soSanhAmDuong").innerHTML = `Số dương < Số âm`;
+    document.getElementById("ketQua10").innerHTML = `10. Số dương < Số âm`;
   } else {
     console.log("Số dương = Số âm");
-    document.getElementById("soSanhAmDuong").innerHTML = `Số dương = Số âm`;
+    document.getElementById("ketQua10").innerHTML = `10. Số dương = Số âm`;
   }
 };
